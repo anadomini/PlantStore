@@ -1,0 +1,9 @@
+﻿@model Plant
+
+<div class="col-lg-3">
+    <a href="~/Home/View/@Model.PlantId"><img class="img-thumbnail" src="@Model.Image" title="@Model.Name" /></a>
+    <a href="~/Home/View/@Model.PlantId"><h3>@Model.Name</h3></a>
+    <h5>@Model.Type</h5>
+    <p>@Model.Price.ToString("c")</p>
+    <p><a class="btn btn-warning btn-space" href="~/Home/View/@Model.PlantId">Details</a></p>
+</div>

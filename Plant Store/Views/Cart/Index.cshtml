@@ -1,0 +1,13 @@
+﻿@model CartViewModel
+
+<div style="padding-left: 0px;" class="container">
+    @foreach(var el in Model.cart.ShopItems)
+            {
+                <div class="alert alert-warning mt-3">
+                    <b>Name:</b> @el.Plant.Name <br />
+                    <b>Price:</b> @el.Plant.Price.ToString("c")
+                </div> 
+            }
+    <br />
+    <p><a class="btn btn-warning btn-space" href="~/Order/CheckOut">Order</a>
+</div>

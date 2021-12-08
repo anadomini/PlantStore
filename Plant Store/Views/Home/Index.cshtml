@@ -1,0 +1,11 @@
+﻿@model HomeViewModel
+
+<h3 class="text-center">New Releases</h3>
+<div class="row mt-4 mb-2">
+    @{
+        foreach (Plant plant in Model.favPlants)
+        {
+            @Html.Partial("AllPlants", plant);
+        }
+    }
+</div>

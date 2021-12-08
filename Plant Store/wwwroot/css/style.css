@@ -1,0 +1,38 @@
+﻿body {
+    font-family: Apple Chancery, cursive;
+    font-size: 16px;
+}
+
+body {
+    background-color: #ABB98E;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+input {
+    font-size: 16px;
+    font-family: Apple Chancery, cursive;
+}
+
+footer .container {
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0px;
+}
+
+.call-name {
+    margin-bottom: 10px;
+}
+
+.img-view {
+    margin-bottom: 25px;
+}
+
+.form-control {
+    margin-bottom: 0px;
+}

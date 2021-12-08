@@ -1,0 +1,11 @@
+﻿@model CategoryViewModel
+
+<h3 class="text-center">Categories</h3>
+<div class="row mt-4 mb-2">
+    @{
+        foreach (Category category in Model.categories)
+        {
+            @Html.Partial("AllCategories", category);
+        }
+    }
+</div>

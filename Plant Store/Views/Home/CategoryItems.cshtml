@@ -1,0 +1,11 @@
+﻿@model CategoryViewModel
+
+<h2>Saoirse's Garden</h2>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Plant plant in Model.allPlants)
+        {
+            @Html.Partial("AllPlants", plant);
+        }
+    }
+</div>
