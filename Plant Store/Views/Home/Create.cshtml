@@ -1,0 +1,45 @@
+﻿@model Plant
+
+<h3>New Plant</h3>
+@using (Html.BeginForm("Create", "Home", FormMethod.Post))
+{
+
+    @Html.HiddenFor(pl => pl.PlantId)
+    <p>
+        Name <br />
+        @Html.EditorFor(pl => pl.Name)
+    </p>
+    <p>
+        Type <br />
+        @Html.EditorFor(pl => pl.Type)
+    </p>
+    <p>
+        Description <br />
+        @Html.EditorFor(pl => pl.Description)
+    </p>
+    <p>
+        Care <br />
+        @Html.EditorFor(pl => pl.Care)
+    </p>
+    <input type="file" name="Image" id="Image" onchange="fileCheck(this);" />
+    <p>
+        Price <br />
+        @Html.EditorFor(pl => pl.Price)
+    </p>
+    <p>
+        IsFavourite <br />
+        @Html.EditorFor(pl => pl.IsFavourite)
+    </p>
+    <p>
+        Available <br />
+        @Html.EditorFor(pl => pl.Available)
+    </p>
+    <p>
+        Category <br />
+        @Html.DropDownListFor(model => model.CategoryId, ViewBag.Cat as SelectList)
+    </p>
+    <p>
+        <input type="submit" value="Create" />
+    </p>
+
+}
