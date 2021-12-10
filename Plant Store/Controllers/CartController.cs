@@ -32,12 +32,19 @@ namespace Plant_Store.Controllers
 
         public RedirectToActionResult AddToCart(int id)
         {
-            var item = plantRepository.Plants.FirstOrDefault(i => i.PlantId == id);
-            if(item != null)
-            {
-                cart.AddToCart(item);
+            if(User.Identity.IsAuthenticated)
+                    {
+                var item = plantRepository.Plants.FirstOrDefault(i => i.PlantId == id);
+                if (item != null)
+                {
+                    cart.AddToCart(item);
+                }
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
     }
 }

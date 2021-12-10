@@ -58,14 +58,6 @@ namespace Plant_Store
                 routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
                 routes.MapRoute(name: "categoryFilter", template: "Home/{action}/{category?}", defaults: new { Controller="Home", action="Category" });
             });
-
-            #region Comment
-            //using (var scope = app.ApplicationServices.CreateScope())
-            //{
-            //    DataContext context = scope.ServiceProvider.GetRequiredService<DataContext>();
-            //    DBObjects.Initial(context);
-            //}
-            #endregion
         }
     }
 }

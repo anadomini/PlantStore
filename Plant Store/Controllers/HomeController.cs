@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Plant_Store.Data;
 using Plant_Store.Data.Interfaces;
 using Plant_Store.Data.Models;
@@ -15,7 +17,7 @@ namespace Plant_Store.Controllers
     {
         private readonly IPlant plantRepository;
         private readonly IPlantCategory categoryRepository;
-        
+
         public HomeController(IPlant plantRepository, IPlantCategory categoryRepository)
         {
             this.plantRepository = plantRepository;
