@@ -8,13 +8,11 @@
             <td>@role.Name</td>
             <td>
                 <form asp-action="Delete" asp-route-id="@role.Id" method="post">
-                    <button type="submit" class="btn btn-sm btn-danger">
-                        Delete
-                    </button>
+                    <button style="float:right;" type="submit" class="btn btn-warning">Delete</button>
                 </form>
             </td>
         </tr>
     }
 </table>
-<a asp-action="Create">Add Role</a>
-<a asp-action="UserList">Users List</a>
+<a style="float: right;" class="btn btn-warning btn-space" href="~/Roles/Create/">Add Role</a>
+<a class="btn btn-warning btn-space" href="~/Roles/UserList/">Users List</a>

@@ -1,6 +1,7 @@
 ﻿body {
     font-family: Apple Chancery, cursive;
     font-size: 16px;
+    overflow-y: scroll;
 }
 
 body {
@@ -50,3 +51,10 @@ footer p {
 .d-flex input:hover {
     color: #0066CC;
 }
+
+table td {
+    vertical-align:middle; 
+    border-color: black;
+}
+
+
