@@ -5,8 +5,8 @@
     @{
         @if (User.IsInRole("Admin"))
         {
-            <div class="float-end">
-                <p><a class="btn btn-warning btn-space" href="~/Home/Create/">Create</a></p>
+            <div class="row">
+                <a style="margin-left:12px; margin-bottom: 16px;" class="btn btn-warning btn-space" href="~/Home/Create/">Create</a>
             </div>
         }
         foreach (Plant plant in Model.favPlants)

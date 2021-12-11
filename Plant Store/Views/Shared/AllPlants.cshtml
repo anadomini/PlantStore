@@ -7,12 +7,9 @@
     <p>@Model.Price.ToString("c")</p>
     @if (User.IsInRole("Admin"))
     {
-        <p><a class="btn btn-warning btn-space" href="~/Home/Edit/@Model.PlantId">Edit</a></p>
-        <p>
-            @using (Html.BeginForm("Delete", "Home", new { Id = @Model.PlantId }, FormMethod.Post))
-            {
-                <button class="btn btn-warning btn-space">Delete</button>
-            }
-        </p>
+        <p><a style="display: inherit;" class="btn btn-warning btn-space" href="~/Home/Edit/@Model.PlantId">Edit</a></p>
+        <form style="display: grid; padding-bottom: 16px;" action="~/Home/Delete/@Model.PlantId" method="post">
+            <button class="btn btn-warning btn-space">Delete</button>
+        </form>
     }
 </div>

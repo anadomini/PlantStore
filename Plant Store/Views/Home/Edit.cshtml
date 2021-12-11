@@ -1,45 +1,65 @@
 ﻿@model Plant
 
 <h3>@Model.Name</h3>
-@using (Html.BeginForm("Edit", "Home", FormMethod.Post))
-{
-
+<form method="post" asp-controller="Home" asp-action="Edit">
     @Html.HiddenFor(pl => pl.PlantId)
-    <p>
-        Name <br />
-        @Html.EditorFor(pl => pl.Name)
-    </p>
-    <p>
-        Type <br />
-        @Html.EditorFor(pl => pl.Type)
-    </p>
-    <p>
-        Description <br />
-        @Html.EditorFor(pl => pl.Description)
-    </p>
-    <p>
-        Care <br />
-        @Html.EditorFor(pl => pl.Care)
-    </p>
-    <input type="file" name="Image" id="Image";" />
-    <p>
-        Price <br />
-        @Html.EditorFor(pl => pl.Price)
-    </p>
-    <p>
+    <div class="form-group">
+        <label style="font-size: 16px;" asp-for="Name"></label>
+        <div class="col-md-5">
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label style="font-size: 16px;" asp-for="Type"></label>
+        <div class="col-md-5">
+            <input asp-for="Type" class="form-control" />
+            <span asp-validation-for="Type" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label style="font-size: 16px;" asp-for="Description"></label>
+        <div class="col-md-5">
+            <input asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label style="font-size: 16px;" asp-for="Care"></label>
+        <div class="col-md-5">
+            <input asp-for="Care" class="form-control" />
+            <span asp-validation-for="Care" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label style="font-size: 16px;" asp-for="Image"></label>
+        <div class="col-md-5">
+            <label class="btn btn-warning">
+                Choose image...
+                <input type="file" style="display: none;" name="Image">
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label style="font-size: 16px;" asp-for="Price"></label>
+        <div class="col-md-5">
+            <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+    </div>
+    <p style="margin-bottom: 0px;">
         IsFavourite <br />
         @Html.EditorFor(pl => pl.IsFavourite)
     </p>
-    <p>
+    <p style="margin-bottom: 0px;">
         Available <br />
         @Html.EditorFor(pl => pl.Available)
     </p>
-    <p>
+    <p style="margin-bottom: 0px;">
         Category <br />
-        @Html.DropDownListFor(model => model.CategoryId, ViewBag.Cat as SelectList)
+        @Html.DropDownListFor(model => model.CategoryId, ViewBag.Cat as SelectList, new { @class = "dropdown" })
     </p>
     <p>
-        <input type="submit" value="Edit" />
+        <input style="margin-top: 15px;" class="btn btn-warning" type="submit" value="Edit" />
     </p>
-}
-
+</form>
