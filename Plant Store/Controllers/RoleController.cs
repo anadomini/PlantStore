@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Plant_Store.Controllers
 {
-    public class RolesController : Controller
+    public class RoleController : Controller
     {
         RoleManager<IdentityRole> _roleManager;
         UserManager<User> _userManager;
 
-        public RolesController(RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
+        public RoleController(RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
         {
             _roleManager = roleManager;
             _userManager = userManager;
